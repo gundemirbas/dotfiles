@@ -1,0 +1,16 @@
+{
+  "ignition": {
+    "version": "3.1.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "core",
+        "passwordHash": "$y$j9T$CGq.sCV/KweH2.nq/ahiN.$BcjklwYuI/ynV4tV50sJ57aXPuhF/DtfJw9lvqcWub2",
+        "sshAuthorizedKeys": [
+          "key1"
+        ]
+      }
+    ]
+  }
+}
