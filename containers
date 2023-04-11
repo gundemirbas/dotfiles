@@ -1,2 +1,2 @@
 podman run -ti --rm quay.io/coreos/mkpasswd --method=yescrypt
-podman run --interactive --rm quay.io/coreos/butane:release --pretty --strict < your_config.bu > transpiled_config.ign
+podman run --interactive --rm quay.io/coreos/butane:release --pretty --strict < but.bu > ign.ign
