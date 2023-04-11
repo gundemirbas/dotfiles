@@ -3,5 +3,7 @@ version: 1.1.0
 passwd:
   users:
     - name: core
-    password_hash: $y$j9T$CGq.sCV/KweH2.nq/ahiN.$BcjklwYuI/ynV4tV50sJ57aXPuhF/DtfJw9lvqcWub2
+      ssh_authorized_keys:
+        - key1
+      password_hash: $y$j9T$CGq.sCV/KweH2.nq/ahiN.$BcjklwYuI/ynV4tV50sJ57aXPuhF/DtfJw9lvqcWub2
     
