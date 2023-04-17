@@ -1,9 +1,8 @@
-#!/bin/bash
-
-podman create --cgroupns=host --dns=none --env XDG_RUNTIME_DIR=/run/user/1000 --hostname toolbox --ipc=host \
+podman create --cgroupns=host --dns=none --env XDG_RUNTIME_DIR=/run/user/1000 --env TOOLBOX_PATH=/usr/bin/toolbox --hostname toolbox --ipc=host \
  --mount=type=devpts,destination=/dev/pts --name test --network host --no-hosts --pid host --privileged --security-opt=label=disable \
  --ulimit=host --userns=keep-id --user=root:root --volume /:/run/host:rslave --volume /dev:/dev:rslave \
- --volume /run/dbus/system_bus_socket:/run/dbus/system_bus_socket --volume /var/home/xexnaor:/var/home/xexnaor:rslave \
+ --volume /run/dbus/system_bus_socket:/run/dbus/system_bus_socket --volume /var/home/core:/var/home/core:rslave \
  --volume /usr/bin/toolbox:/usr/bin/toolbox:ro --volume /run/user/1000:/run/user/1000 --volume /run/media:/run/media:rslave \
- quay.io/toolbx-images/archlinux-toolbox toolbox --log-level debug init-container \
- --gid 1000 --home /var/home/xexnaor --shell /bin/bash --uid 1000 --user xexnaor --monitor-host --home-link --media-link --mnt-link
+ --volume /etc/profile.d/toolbox.sh:/etc/profile.d/toolbox.sh:ro quay.io/toolbx-images/archlinux-toolbox toolbox --log-level debug init-container \
+ --gid 1000 --home /var/home/core --shell /bin/bash --uid 1000 --user core --monitor-host --home-link --media-link --mnt-link
+ 
