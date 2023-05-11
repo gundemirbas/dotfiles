@@ -1,1 +1,0 @@
-ghcr.io/chimeraos/chimeraos@sha256:f36915f9c5e31b0cef68a842ad4e4827a501df4f271b56e9be2a94e2bfe51517
